@@ -1,0 +1,175 @@
+body{
+
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color:#343a40;
+/* border:1px solid blue ; */
+
+}
+:root{
+    --lime-green: hsl(163, 72%, 41%);
+    --bright-red: hsl(356, 69%, 56%);
+    --twitter: hsl(195, 100%, 50%);
+    --facebook: hsl(203, 89%, 53%);
+    --instagram:  linear-gradient(to right, #da4453, #89216b);
+    --youTube: hsl(348, 97%, 39%);
+    --gray:#495057;
+}
+
+
+.header{
+ /* border: 1px solid #ff00ff;  */
+background:#F4ECF7 ;
+padding-bottom:80px ;
+border-radius: 0 0 12px 12px;
+padding-top: .8em;
+}
+h1{
+    font-size: 1.8em;
+    font-weight:700;
+    margin: 0;
+}
+.header-followers{
+    color: var(--gray);
+    font-weight: bolder;
+    margin: .5em 0 ;
+    padding-bottom: 1em;
+    border-bottom: solid 2px #7F8C8D ;
+    border-radius: 5px;
+
+
+
+
+}
+
+
+
+
+
+/* bloque de las cards */
+.top-cards{
+/* border: 5px solid #ff00ff; */
+margin-top: -45px;
+
+}
+
+
+
+
+
+
+
+.card{
+    
+    border-radius: 15px;
+    overflow: hidden; 
+    background:#edf2ff;
+    text-align: center;
+    padding: 2em 0 ;
+    position: relative;
+    
+}
+
+.card:before{
+    content: "";
+    height: 4px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.card.facebook::before{
+    background:var(--facebook);
+    
+}
+.card.instagram::before{
+    background:var(--instagram);
+}
+.card.twitter::before{
+    background:var(--twitter);
+}
+.card.youtube::before{
+    background:var(--youTube);
+}
+
+.card-title{
+    
+    color:var(--gray) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:.9em;
+    font-weight: bold;
+}
+
+.card-title img{
+    margin-right: 8px;
+
+}
+
+
+
+
+
+.wrapper{
+
+    padding: 0 20px;
+}
+
+.grid{
+    display: grid;
+    grid-row-gap:28px ;
+
+
+
+}
+    
+
+.card-followers{
+    /* border: 1px solid greenyellow; */
+
+
+}
+
+.card-followers-number{
+    
+    font-size: 50px;
+    font-weight: 800 ;
+
+}
+
+.card-followers-title{
+   
+    display:block;
+    text-transform: uppercase;
+    color: var(--gray);
+    letter-spacing: 4px;
+    font-size: .8em;
+}
+.card-today{
+    color: var(--lime-green);
+    font-size: .7em;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.card-today img{
+
+margin-right: 8px;
+
+}
+
+     
+
+
+
+
+
+    
+
+
+
