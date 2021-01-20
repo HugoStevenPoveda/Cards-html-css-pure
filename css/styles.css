@@ -1,3 +1,5 @@
+/* globales */
+
 body{
 
     margin: 0;
@@ -16,49 +18,47 @@ body{
     --gray:#495057;
 }
 
+.wrapper{
+    padding: 0 30px;
+}
+.grid{
+    display: grid;
+    grid-row-gap:25px ;
+}
+
 
 .header{
- /* border: 1px solid #ff00ff;  */
+ 
 background:#F4ECF7 ;
-padding-bottom:80px ;
-border-radius: 0 0 12px 12px;
-padding-top: .8em;
+padding-bottom:100px ;
+border-radius: 0 0 20px 20px;
+padding-top: 2em;
+
 }
+
+.header-followers{
+     
+    color: var(--gray);
+    margin: .5em 0 ;
+    font-weight: 600;
+    border-bottom: solid 1px var(--gray) ;
+    padding-bottom: 1.5em;
+    
+}
+
 h1{
     font-size: 1.8em;
-    font-weight:700;
+    font-weight:800;
     margin: 0;
 }
-.header-followers{
-    color: var(--gray);
-    font-weight: bolder;
-    margin: .5em 0 ;
-    padding-bottom: 1em;
-    border-bottom: solid 2px #7F8C8D ;
-    border-radius: 5px;
-
-
-
-
-}
-
-
-
 
 
 /* bloque de las cards */
 .top-cards{
 /* border: 5px solid #ff00ff; */
 margin-top: -45px;
-
+margin-bottom: 3em;
 }
-
-
-
-
-
-
-
 .card{
     
     border-radius: 15px;
@@ -67,8 +67,9 @@ margin-top: -45px;
     text-align: center;
     padding: 2em 0 ;
     position: relative;
-    
 }
+
+
 
 .card:before{
     content: "";
@@ -94,12 +95,13 @@ margin-top: -45px;
     background:var(--youTube);
 }
 
+
 .card-title{
     
-    color:var(--gray) ;
     display: flex;
     align-items: center;
     justify-content: center;
+    color:var(--gray) ;
     font-size:.9em;
     font-weight: bold;
 }
@@ -109,34 +111,14 @@ margin-top: -45px;
 
 }
 
-
-
-
-
-.wrapper{
-
-    padding: 0 20px;
-}
-
-.grid{
-    display: grid;
-    grid-row-gap:28px ;
-
-
-
-}
-    
-
 .card-followers{
     /* border: 1px solid greenyellow; */
-
-
 }
 
 .card-followers-number{
     
     font-size: 50px;
-    font-weight: 800 ;
+    font-weight: 700 ;
 
 }
 
@@ -149,9 +131,10 @@ margin-top: -45px;
     font-size: .8em;
 }
 .card-today{
+    margin-top: 20px;
     color: var(--lime-green);
     font-size: .7em;
-    margin-top: 20px;
+    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,9 +142,131 @@ margin-top: -45px;
 }
 .card-today img{
 
-margin-right: 8px;
+margin-right: 6px;
 
 }
+
+
+/* segunda parte de cards overview  */
+
+.overview{
+    padding-bottom: 2em;
+}
+
+h2{
+    color: var(--gray);
+    font-size: 1.8em;
+    font-weight:800;
+   
+}
+
+
+.card-small{
+
+   /*  border: #343a40 solid 1px; */
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 1em;
+    background:#E9F7EF ;
+    border-radius: 8px;
+    padding: 1.7em;
+    }
+
+    
+    .card-small p{
+    margin: 0;
+}
+    
+.card-small-views{
+    color: var(--gray);
+    font-size: .8em;
+    font-weight: 800;
+
+
+}
+.card-small-icon{
+    text-align: right;
+}
+
+.card-small-number{
+      font-weight: 800;
+      font-size: 2.5em;
+      line-height: .9;
+    }
+    
+
+    .card-small-porcentage{
+     
+        color: var(--lime-green);
+        font-size: .8em;
+        font-weight: 800;
+        text-align: right;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        
+    }
+    .card-small-porcentage.is-danger{
+        color: var(--bright-red);
+    }
+       
+    
+.card-small-porcentage span{
+    display: flex;
+    align-items: center;
+    }
+
+    
+    .card-small-porcentage img{
+        margin-right: 6px;
+    }
+    
+ 
+    
+
+
+
+
+
+
+
+    
+
+   
+    
+
+
+
+
+
+
+
+
+
+    
+  
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
      
 
@@ -170,6 +275,36 @@ margin-right: 8px;
 
 
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    
+
+
 
 
 
