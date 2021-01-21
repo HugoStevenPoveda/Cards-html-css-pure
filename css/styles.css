@@ -4,7 +4,9 @@ body{
 
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    color:#343a40;
+    color:var(--base-color);
+    background: var(--base-backgound);
+    
 /* border:1px solid blue ; */
 
 }
@@ -16,6 +18,14 @@ body{
     --instagram:  linear-gradient(to right, #da4453, #89216b);
     --youTube: hsl(348, 97%, 39%);
     --gray:#495057;
+    --fondo:#edf2ff;
+    --fondo-header:#f1f3f5;
+    --base-backgound:white;
+    --base-color:#343a40;
+    --switch:#495057;
+    --switch-before:#f8f9fa;
+
+
 }
 
 .wrapper{
@@ -26,10 +36,68 @@ body{
     grid-row-gap:25px ;
 }
 
+.checkbox:checked~.switch::before{
+
+/* border: #444eda 1px solid ; */
+transform: translateX(0px);
+
+}
+
+
+
+    
+.dark-mode{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1em;
+}  
+    
+    
+    
+    
+.checkbox{
+     display: none;
+    }  
+
+.switch{
+   /*  border: #89216b solid 1px; */
+    height: 35px;
+    display: block;
+    border-radius: 20px;
+    background: var(--switch);
+    width: 80px;
+    padding: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+
+.switch::before{
+
+  content: "";
+  display: block;
+  width: 28px;
+  height: 28px;
+  background:var(--switch-before);
+  border-radius: 50px;
+  transform: translateX(36px);
+  
+  transform: 100s;
+  will-change: transform;
+
+
+}
+   
+
+
+
+
 
 .header{
  
-background:#F4ECF7 ;
+background:var(--fondo-header) ;
 padding-bottom:100px ;
 border-radius: 0 0 20px 20px;
 padding-top: 2em;
@@ -38,10 +106,10 @@ padding-top: 2em;
 
 .header-followers{
      
-    color: var(--gray);
+   
     margin: .5em 0 ;
     font-weight: 600;
-    border-bottom: solid 1px var(--gray) ;
+    border-bottom: solid 2px var(--gray) ;
     padding-bottom: 1.5em;
     
 }
@@ -63,7 +131,7 @@ margin-bottom: 3em;
     
     border-radius: 15px;
     overflow: hidden; 
-    background:#edf2ff;
+    background:var(--fondo);
     text-align: center;
     padding: 2em 0 ;
     position: relative;
@@ -154,7 +222,7 @@ margin-right: 6px;
 }
 
 h2{
-    color: var(--gray);
+    
     font-size: 1.8em;
     font-weight:800;
    
@@ -168,7 +236,7 @@ h2{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 1em;
-    background:#E9F7EF ;
+    background:var(--fondo) ;
     border-radius: 8px;
     padding: 1.7em;
     }
@@ -222,8 +290,125 @@ h2{
         margin-right: 6px;
     }
     
- 
+  @media screen and (min-width:480px){
+      .grid{
+      grid-template-columns: 1fr 1fr ; 
+      
+      grid-column-gap:25px ;
+      }
+
+      .wrapper{
+      max-width: 1440px;
+      margin: auto;
+      }}
+@media screen and (min-width:768px){
+                      
+    .grid{
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-column-gap:25px ;
+        }
+
+        .wrapper{
+            max-width: 1440px;
+            margin: auto;
+            }
+    }            
+                  
+                  
+              
+       
+
+
+
+
+@media screen and (min-width:1204px){
     
+.grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-column-gap:25px ;
+    }
+    .wrapper{
+        max-width: 1440px;
+        margin: auto;
+        }
+
+        .header-followers{
+            border: none;
+        } 
+        
+        .header-grid{
+            display: grid;
+            grid-template-columns: 1fr 150px;
+        }
+}
+
+
+.is-dark-mode{
+    --fondo:#868e96;
+    --fondo-header:#212529;
+    --base-backgound:#343a40;
+    --base-color:#f8f9fa;
+    --switch:linear-gradient(90deg, rgba(195,250,232,1) 0%, rgba(73,80,87,0.9640231092436975) 49%);
+    --switch-before:radial-gradient(circle, rgba(8,127,91,1) 0%, rgba(241,243,245,1) 49%);
+    
+}
+
+.is-dark-light{
+    --gray:#495057;
+    --fondo:#edf2ff;
+    --fondo-header:#f1f3f5;
+    --base-backgound:white;
+    --base-color:#343a40;
+    --switch:#495057;
+    --switch-before:#f8f9fa;
+}
+
+
+
+
+
+
+
+@media (prefers-color-scheme:dark){
+   
+    :root{
+        --fondo:#868e96;
+        --fondo-header:#212529;
+        --base-backgound:#343a40;
+        --base-color:#f8f9fa;
+        --switch:linear-gradient(90deg, rgba(195,250,232,1) 0%, rgba(73,80,87,0.9640231092436975) 49%);
+        --switch-before:radial-gradient(circle, rgba(8,127,91,1) 0%, rgba(241,243,245,1) 49%);
+        }
+
+   
+    
+
+    .checkbox:checked~.switch{
+
+        background: linear-gradient(90deg,  rgba(73,80,87,0.9640231092436975) 0%, rgba(195,250,232,1) 49%);
+        
+        }
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -247,6 +432,12 @@ h2{
     
   
     
+
+
+    
+
+
+
 
 
 
